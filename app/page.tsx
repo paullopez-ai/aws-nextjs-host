@@ -29,7 +29,7 @@ export default function Home() {
             aws-nextjs-host
           </h1>
           <p className="text-xl text-muted-foreground">
-            Bootstrapped with Paul&apos;s preferred Next.js configuration
+            Bootstrapped with Paul&apos;s preferred Next.js guidelines
           </p>
           <div className="flex gap-3">
             <Badge>Next.js 16</Badge>
