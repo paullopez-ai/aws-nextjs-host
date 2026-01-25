@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -13,42 +12,25 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import { HomeIcon, SettingsIcon, UserIcon, AlertCircleIcon, CheckmarkCircleIcon } from "@hugeicons/core-free-icons";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    document.documentElement.classList.toggle("dark");
-  };
-
   return (
-    <main className="min-h-screen p-8 md:p-16 lg:p-24">
+    <main className="min-h-screen p-8 md:p-16 lg:p-24 animate-fade-in">
       <div className="max-w-4xl mx-auto space-y-12">
         {/* Header */}
         <div className="space-y-4">
-          <h1 className="font-display text-5xl font-bold">
-            aws-nextjs-host
+          <h1 className="font-display text-5xl font-bold tracking-wider text-primary animate-text-shimmer bg-clip-text text-transparent bg-[linear-gradient(110deg,theme(colors.primary),45%,theme(colors.foreground),55%,theme(colors.primary))] bg-[length:250%_100%]">
+            Paul&apos;s Next.js Bootstrap
           </h1>
-          <p className="text-xl text-muted-foreground">
-            Bootstrapped with Paul&apos;s preferred Next.js guidelines
+          <p className="text-xl text-muted-foreground font-sans">
+            Bootstrapped with Paul&apos;s preferred Next.js configuration
           </p>
           <div className="flex gap-3">
-            <Badge>Next.js 16</Badge>
+            <Badge variant="outline">Next.js 16</Badge>
             <Badge variant="secondary">Tailwind v4</Badge>
             <Badge variant="outline">shadcn/ui</Badge>
           </div>
         </div>
 
         <Separator />
-
-        {/* Dark Mode Toggle */}
-        <div className="flex items-center gap-4">
-          <Button onClick={toggleDarkMode} variant="outline">
-            Toggle {darkMode ? "Light" : "Dark"} Mode
-          </Button>
-          <span className="text-sm text-muted-foreground">
-            Current: {darkMode ? "Dark" : "Light"} mode
-          </span>
-        </div>
 
         {/* Buttons Section */}
         <section className="space-y-4">
@@ -74,7 +56,7 @@ export default function Home() {
         <section className="space-y-4">
           <h2 className="font-display text-2xl font-semibold">Cards</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <Card>
+            <Card className="border">
               <CardHeader>
                 <CardTitle>Card Title</CardTitle>
                 <CardDescription>Card description goes here</CardDescription>
@@ -83,7 +65,7 @@ export default function Home() {
                 <p>This is the card content area. You can put anything here.</p>
               </CardContent>
             </Card>
-            <Card className="border-brand">
+            <Card className="border border-brand">
               <CardHeader>
                 <CardTitle className="text-brand">Brand Card</CardTitle>
                 <CardDescription>With brand color accent</CardDescription>
@@ -102,7 +84,7 @@ export default function Home() {
         {/* Form Elements */}
         <section className="space-y-4">
           <h2 className="font-display text-2xl font-semibold">Form Elements</h2>
-          <Card>
+          <Card className="border">
             <CardContent className="pt-6 space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="name">Name</Label>
@@ -174,7 +156,7 @@ export default function Home() {
               <span className="text-xs text-muted-foreground">User</span>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <HugeiconsIcon icon={CheckmarkCircleIcon} className="h-8 w-8 text-green-500" />
+              <HugeiconsIcon icon={CheckmarkCircleIcon} className="h-8 w-8 text-primary" />
               <span className="text-xs text-muted-foreground">Success</span>
             </div>
           </div>
@@ -186,16 +168,16 @@ export default function Home() {
         <section className="space-y-4">
           <h2 className="font-display text-2xl font-semibold">Typography</h2>
           <div className="space-y-3">
-            <h1 className="font-display text-4xl font-bold">Display Heading (Playfair)</h1>
-            <h2 className="text-2xl font-semibold">Sans Heading (Raleway)</h2>
-            <p className="text-base">
+            <h1 className="font-display text-4xl font-bold">Display Heading (Chakra Petch)</h1>
+            <h2 className="text-2xl font-semibold font-sans">Sans Heading (Share Tech Mono)</h2>
+            <p className="text-base font-sans">
               Regular body text using the default sans font. This is how most of your content will look.
             </p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground font-sans">
               Muted text for secondary information and descriptions.
             </p>
             <code className="font-mono text-sm bg-muted px-2 py-1">
-              Monospace text for code
+              Monospace text for code (Share Tech Mono)
             </code>
           </div>
         </section>
@@ -203,7 +185,7 @@ export default function Home() {
         <Separator />
 
         {/* Footer */}
-        <footer className="text-center text-sm text-muted-foreground py-8">
+        <footer className="text-center text-sm text-muted-foreground py-8 font-sans">
           <p>Built with Next.js, Tailwind CSS v4, and shadcn/ui</p>
           <p className="mt-1">Ready to start building!</p>
         </footer>
