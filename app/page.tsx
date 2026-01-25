@@ -10,6 +10,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Separator } from "@/components/ui/separator";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { HomeIcon, SettingsIcon, UserIcon, AlertCircleIcon, CheckmarkCircleIcon } from "@hugeicons/core-free-icons";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export default function Home() {
   return (
@@ -23,10 +24,11 @@ export default function Home() {
           <p className="text-xl text-muted-foreground font-sans">
             Bootstrapped with Paul&apos;s preferred Next.js configuration
           </p>
-          <div className="flex gap-3">
+          <div className="flex gap-3 flex-wrap items-center">
             <Badge variant="outline">Next.js 16</Badge>
             <Badge variant="secondary">Tailwind v4</Badge>
             <Badge variant="outline">shadcn/ui</Badge>
+            <ThemeToggle className="ml-auto" />
           </div>
         </div>
 
