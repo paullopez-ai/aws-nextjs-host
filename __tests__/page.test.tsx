@@ -34,7 +34,7 @@ describe('Home Page', () => {
   it('renders the main title', () => {
     renderWithTheme(<Home />)
 
-    const heading = screen.getByRole('heading', { level: 1, name: "Paul's Next.js Bootstrap" })
+    const heading = screen.getByRole('heading', { level: 1, name: "Paul's Next.js Test" })
     expect(heading).toBeInTheDocument()
   })
 

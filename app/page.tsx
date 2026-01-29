@@ -19,7 +19,7 @@ export default function Home() {
         {/* Header */}
         <div className="space-y-4">
           <h1 className="font-display text-5xl font-bold tracking-wider text-primary animate-text-shimmer bg-clip-text text-transparent bg-[linear-gradient(110deg,theme(colors.primary),45%,theme(colors.foreground),55%,theme(colors.primary))] bg-[length:250%_100%]">
-            Paul&apos;s Next.js Bootstrap
+            Paul&apos;s Next.js Test
           </h1>
           <p className="text-xl text-muted-foreground font-sans">
             Bootstrapped with Paul&apos;s preferred Next.js configuration
